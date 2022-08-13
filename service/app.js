@@ -5,13 +5,10 @@ const service = express();
 
 service.set("view engine", "ejs");
 service.set("views", "./service/views");
+service.use(express.json());
+service.use(express.urlencoded({ extended: true }));
 
-module.exports = () => {
-  service.use(express.json());
-  service.use(express.urlencoded({ extended: true }));
+service.use("/", express.static(path.join(__dirname, "public")));
+service.use(routes);
 
-  service.use(express.static(path.join(__dirname, "/public")));
-  service.use(routes);
-
-  return service;
-};
+module.exports = service;

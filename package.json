@@ -10,8 +10,11 @@
   "author": "Okan Alkan",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.1.0",
     "nodemon": "^2.0.19"
   }
 }

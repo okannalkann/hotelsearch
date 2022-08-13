@@ -1,0 +1,40 @@
+{
+    "mallorca": [
+        {
+            "name": "Hotel Playa",
+            "stars": 3
+        },
+        {
+            "name": "Hotel Playa Deluxe",
+            "stars": 5
+        }
+    ],
+    "tyrol": [
+        {
+            "name": "Hotel Mountain Budget",
+            "stars": 2
+        },
+        {
+            "name": "Hotel Mountain",
+            "stars": 3
+        },
+        {
+            "name": "Hotel Tyrol Deluxe",
+            "stars": 5
+        }
+    ],
+    "yozgat": [
+        {
+            "name": "Hotel Yilmaz ",
+            "stars": 5
+        },
+        {
+            "name": "Hotel Agri",
+            "stars": 1
+        },
+        {
+            "name": "Hotel Lux Deluxe",
+            "stars": 2
+        }
+    ]
+}

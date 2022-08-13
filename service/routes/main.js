@@ -1,10 +1,9 @@
-const path = require("path");
-
 const express = require("express");
-
-const mainController = require("../controllers/main");
-
+const hotelsController = require("../controllers/hotels");
 const router = express.Router();
 
-router.get("/", mainController.homepage);
-router.get("/hotels:stars", mainController.getHotels);
+router.get("/", hotelsController.getHotels);
+router.get("/hotels/:stars", hotelsController.getHotelsWithStar);
+router.get("/hotels", hotelsController.getHotels);
+
+module.exports = router;

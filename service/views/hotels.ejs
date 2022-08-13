@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Hotels</title>
+</head>
+<body>
+    <a href="/hotels/1">
+        <button>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        </button>
+    </a>
+    <a href="/hotels/2">
+        <button>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        </button>
+    </a>
+    <a href="/hotels/3">
+        <button>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        </button>
+    </a>
+    <a href="/hotels/4">
+        <button>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        </button>
+    </a>
+    <a href="/hotels/5">
+        <button>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        </button>
+    </a>
+    <a href="/hotels/">
+        <button>
+         All 
+        </button>
+    </a>
+
+    <% if (hotelsData) { %>
+        <table>
+            <tr>
+                <th>Hotel Name</th>
+                <th>Hotel Star</th>
+                <th>Destination</th>
+            </tr>
+            <tr>
+            <% for (var i=0; i< hotelsData.length; i++){ %>
+                <td><%= hotelsData[i].name %></td>
+                <td><%= hotelsData[i].stars %></td>
+                <td><%= hotelsData[i].destination %></td>
+                </tr>
+            <% } %>
+          </table>
+    <% } %>
+    
+    <script src="../js/hotels.js"></script>
+</body>
+</html>
