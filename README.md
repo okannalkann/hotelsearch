@@ -2,8 +2,8 @@
 
 # Hotels
 
-| Route | HTTP Verb	 | POST body	 | Description	 |
+| Route | HTTP Verb	 | Description	 |
 | --- | --- | --- | --- |
-| /hotels | `GET` | Empty | List all hotels. |
-| /hotels/:star | `GET` | --- | Hotels matching the given star. |
+| /hotels | `GET` | List all hotels. |
+| /hotels/:star | `GET` | Hotels matching the given star. |
 
