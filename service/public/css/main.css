@@ -34,3 +34,8 @@ a {
     text-decoration: none;
     width: fit-content;
 }
+
+.container{
+    width: 80%;
+    margin: auto;
+}

@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs-extra");
 const fullPath =path.resolve(__dirname, "../data/hotels.json")
+const { logger } = require('../config/winston')
 
 exports.getHotels = async (req, res, next) => {
     const data = await fs.readJson(fullPath);
@@ -15,8 +16,12 @@ exports.getHotels = async (req, res, next) => {
             });
         })
     })
+
+    logger.log({
+            message: result,
+            level: 'info'
+        });
     
-    // res.send(result)
     res.render("hotels", { 
         hotelsData: result,
         stars: null
@@ -47,7 +52,11 @@ exports.getHotelsWithStar = async (req, res, next) => {
             "destination": ""
         });
     
-    // res.send(result)
+    logger.log({
+        message: result,
+        level: 'info'
+    });
+
     res.render("hotels", { 
         hotelsData: result,
         stars: null
